@@ -1,0 +1,57 @@
+<div id="loginModal" class="login-modal">
+  <div class="login-box">
+
+    <!-- HEADER -->
+    <img src="images/Logo.png" class="login-logo" />
+    <h2 id="loginTitle">Bem-vindo à FocoPrime</h2>
+    <p id="loginSubtitle">Entrar com a sua conta</p>
+
+    <!-- ================= LOGIN VIEW ================= -->
+    <div id="loginView">
+
+      <input type="email" id="emailInput" placeholder="Email" class="input-premium">
+      <input type="password" id="passwordInput" placeholder="Senha" class="input-premium">
+
+      <button id="emailLoginBtn" class="btn-premium">
+        Entrar
+      </button>
+
+      <button id="googleLoginBtn" class="btn-google">
+        <i class="fa-brands fa-google"></i> Continuar com Google
+      </button>
+
+      <p class="switch-text">
+        Ainda não tens conta?
+        <span id="showRegister">Criar conta</span>
+      </p>
+
+    </div>
+
+    <!-- ================= REGISTER VIEW ================= -->
+    <div id="registerView" style="display:none;">
+
+      <div class="avatar-upload">
+        <input type="file" id="photoInput" accept="image/*" hidden>
+        <img src="images/user-placeholder.png" id="previewPhoto">
+        <button type="button" id="changePhotoBtn">
+          <i class="ri-camera-line"></i>
+        </button>
+      </div>
+
+      <input type="text" id="registerName" placeholder="Nome completo" class="input-premium">
+      <input type="email" id="registerEmail" placeholder="Email" class="input-premium">
+      <input type="password" id="registerPassword" placeholder="Senha" class="input-premium">
+
+      <button id="emailRegisterBtn" class="btn-premium">
+        Criar Conta
+      </button>
+
+      <p class="switch-text">
+        Já tens conta?
+        <span id="showLogin">Entrar</span>
+      </p>
+
+    </div>
+
+  </div>
+</div>
