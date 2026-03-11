@@ -1,0 +1,121 @@
+/* MODELOS SELETOR */
+.model-modal {
+  top: 70px;
+  left: 20px;
+  position: fixed;
+  background: transparent;
+  bacbkdrop-filter: blur(6px);
+  display: none;
+  z-index: 9999;
+}
+
+.model-modal.show {
+  display: flex;
+}
+
+.model-box {
+  flex-direction: column;
+  background: var(--secondary-hover-color);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 6px;
+  width: 160px;
+  animation: fadeIn .2s ease;
+  ovehrflow-y: auto;
+}
+
+.model-title {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.model-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.model-item {
+  padding: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.model-item:hover {
+  border: 1px solid #3b82f6;
+  transform: translateY(-2px);
+}
+
+.model-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  font-size: 7px;
+  padding: 4px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.badge.free {
+  background: #10b981;
+  color: white;
+}
+
+.premium {
+  border: 1px solid #facc15;
+}
+
+.premium-badge {
+  background: linear-gradient(45deg, gold, orange);
+  color: black;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: scale(.95);}
+  to {opacity:1; transform: scale(1);}
+}
+
+.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* modelos */
+#modelUsageBadge {
+  position: fixed;
+  bottom: 90px; /* ou top: 20px */
+  left: 30px;
+  background: linear-gradient(to right, #1E90FF, #FF69B4, #FFD700);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 999;
+  cursor: default;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.model-box {
+  animation: slideFade .2s ease;
+}

@@ -1,0 +1,96 @@
+/* ===== GEMINI USER PANEL ===== */
+
+.user-gemini-panel {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 360px;
+  height: 100%;
+  background: var(--secondary-color);
+  box-shadow: -5px 0 30px rgba(0,0,0,0.5);
+  transition: 0.3s ease;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-gemini-panel.active {
+  right: 0;
+}
+
+.user-gemini-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+.user-gemini-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Header */
+.user-gemini-header {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Perfil */
+.user-gemini-profile {
+  text-align: center;
+  padding: 20px;
+}
+
+.user-gemini-profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Menu */
+.user-gemini-menu {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.gemini-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gemini-item:hover {
+  background: #1d7efd;
+  color: #fff;
+}
+
+.gemini-item.premium {
+  background: linear-gradient(45deg,#1d7efd,#6f42c1);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Logout */
+.panel-logout {
+  border: none;
+  background: #d62939;
+  color: #fff;
+  padding: 12px;
+  margin: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}

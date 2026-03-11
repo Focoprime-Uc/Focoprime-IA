@@ -1,0 +1,71 @@
+/* ==============================
+   TOP APP BAR (FIXA)
+================================ */
+.top-app-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  background: linear-gradient(to right, #1d7efd, #8f6fff);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  z-index: 999999;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.top-app-left {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.top-app-left strong {
+  font-size: 14px;
+}
+
+.top-app-left span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Botão Upgrade */
+.top-app-btn {
+  display: inline-flex;              /* 🔑 chave do alinhamento */
+  align-items: center;               /* centra verticalmente */
+  justify-content: center;
+  gap: 6px;                           /* espaço entre ícone e texto */
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1;                     /* evita desalinhamento */
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+/* Ícone */
+.top-app-btn .material-symbols-rounded {
+  font-size: 20px;
+  line-height: 1;                     /* MUITO importante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Texto */
+.top-app-btn .btn-text {
+  white-space: nowrap;
+}
+
+/* Hover premium */
+.top-app-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}

@@ -1,0 +1,163 @@
+/* ===== UPGRADE MODAL ===== */
+.upgrade-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.upgrade-modal.show {
+  display: flex;
+}
+
+.upgrade-box {
+  max-height: 85vh;
+  overflow-y: auto;
+  width: 90%;
+  max-width: 420px;
+  background: var(--secondary-color);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+  animation: popUp 0.3s ease;
+  position: relative;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.upgrade-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--placeholder-color);
+  cursor: pointer;
+}
+
+.upgrade-header {
+  text-align: center;
+}
+
+/* ÍCONE DO HEADER */
+.upgrade-logo {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(to right, #1d7efd, #8f6fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+}
+
+/* SVG interno */
+.upgrade-logo svg {
+  width: 28px;
+  height: 28px;
+  color: #fff;
+}
+
+.upgrade-header h2 {
+  margin-top: 10px;
+  font-size: 1.8rem;
+}
+
+.upgrade-header p {
+  font-size: 0.95rem;
+  color: var(--subheading-color);
+  margin-top: 4px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  border: 2px solid #1d7efd;
+}
+
+.upgrade-title {
+  display: flex;
+  align-items: center; /* 🔥 alinha verticalmente */
+  justify-content: center;
+  gap: 12px;
+}
+
+.upgrade-title h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.pro-badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+  background: linear-gradient(135deg, #1d7efd, #8f6fff);
+  box-shadow: 0 4px 12px rgba(29, 126, 253, 0.4);
+}
+
+.upgrade-features {
+  list-style: none;
+  margin: 22px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.upgrade-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.upgrade-features span {
+  color: #1d7efd;
+  font-size: 22px;
+}
+
+.upgrade-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s ease;
+}
+
+.upgrade-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(29,126,253,.4);
+}
+
+.upgrade-note {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--placeholder-color);
+  }

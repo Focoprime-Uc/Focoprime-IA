@@ -1,0 +1,364 @@
+/* ===== GEMINI USER PANEL ===== */
+
+.user-gemini-panel {
+  position: fixed;
+  left: -10000px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-color);
+  box-shadow: -5px 0 30px rgba(0,0,0,0.5);
+  transition: 0.3s ease;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-gemini-panel.active {
+  left: 0;
+}
+
+.user-gemini-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+.user-gemini-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidehead {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Perfil */
+.user-gemini-profile {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-gemini-profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.bio {
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 2px solid #1d7efd;
+  font-size: 15px;
+  margin: 0 auto 10px auto; /* 👈 centraliza horizontalmente */
+  justify-content: center;
+}
+
+.bio:hover {
+  background: #1d7efd;
+}
+
+.fechar {
+  background: none;
+  border: none;
+  height: 28px;
+  color: var(--text-color);
+}
+
+.gemini-item:hover {
+  background: #1d7efd;
+  color: #fff;
+}
+
+.gemini-item.premium {
+  background: goldenrod;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Logout */
+.panel-logout {
+  border: none;
+  background: #d62939;
+  color: #fff;
+  padding: 12px;
+  margin: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+.chatgpt-email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 20px;
+  flex-direction: grid;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(29,126,253,0.1);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.chatgpt-email i {
+  font-size: 18px;
+  color: #1d7efd;
+}
+
+.user-gemini-menu {
+  margin-top: 10px;
+}
+
+/* ===== GRID MENU ===== */
+
+.user-gemini-menu {
+  flex: 1;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👈 2 por linha */
+  gap: 15px;
+  overflow-y: auto;
+}
+
+/* CARD GRID */
+.gemini-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1; /* 👈 deixa quadrado */
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: var(--secondary-hover-color);
+  text-align: center;
+}
+
+/* Ícones grandes */
+.gemini-item .gid {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.gemini-item span {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Hover moderno */
+.gemini-item:hover {
+  background: #1d7efd;
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* Premium destacado */
+.gemini-item.premium {
+  background: linear-gradient(135deg, goldenrod, orange);
+  color: white;
+}
+
+/* salvar nome */
+
+.user-name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap; /* 👈 impede sair da área */
+  max-width: 100%;
+}
+
+.user-name-wrapper h3 {
+  margin: 0;
+  font-size: 18px;
+  word-break: break-word;
+}
+
+.edit-name-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.edit-name-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.edit-name-input {
+  display: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #1d7efd;
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+  width: 140px;
+}
+
+.save-name-btn {
+  display: none;
+  border: none;
+  background: #1d7efd;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap; /* 👈 impede quebra feia */
+}
+
+.custom-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.3s ease;
+  z-index: 99999;
+}
+
+.custom-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.custom-toast.success {
+  background: #1d7efd;
+}
+
+.custom-toast.error {
+  background: #d62939;
+}
+
+/* IMAGEM OPÇÕES */
+.photo-options {
+  display: none;
+  flex-direction: column;
+  background: var(--secondary-hover-color);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 6px;
+  width: 160px;
+}
+
+.photo-options.show {
+  display: flex;
+}
+
+.photo-option {
+  padding: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.photo-option:hover {
+  background: #1d7efd;
+  color: white;
+}
+
+/* ===== AVATAR LOADING ===== */
+
+.user-gemini-profile {
+  position: relative;
+}
+
+.avatar-loading {
+  position: absolute;
+  top: 20px; /* ajusta se necessário */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.avatar-loading.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-top: 3px solid #1d7efd;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.gemini-item.report {
+  background: #d62939;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ALCUNHA */
+.bio-input-wrapper {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#nicknameInput {
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1px solid #1d7efd;
+  background: transparent;
+  color: white;
+  width: 160px;
+}
+
+#saveNicknameBtn {
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: none;
+  background: #1d7efd;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+#saveNicknameBtn:hover {
+  transform: translateY(-2px);
+  background: #1054c9;
+}

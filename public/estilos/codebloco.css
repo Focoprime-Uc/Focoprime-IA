@@ -1,0 +1,32 @@
+/* BLOCO DE CÓDIGO ESTILO CHATGPT */
+.code-block {
+  width: 100%;
+  position: relative;
+  background: #0f172a;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #1d7efd;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.copy-code-btn:hover {
+  background: #0264e3;
+}

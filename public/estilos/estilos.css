@@ -1,0 +1,201 @@
+/*gehenwnnw*/
+.user-usage-panel {
+  background: var(--secondary-color);
+  padding: 16px;
+  border-radius: 14px;
+  margin-top: 2px;
+  bordergadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border: 3px solid;
+  border-color: #1d7efd;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-usage-panel h4 {
+  gap: 8px;
+  padding: 10px;
+  font-size: 14px;
+  background: linear-gradient(to right, #1E90FF, #FF69B4, #FFD700);
+  font-weight: 600;
+  margin-bottom: 12px;
+  align-items: center;
+  display: flex;
+  color: white;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#userUsageInfo {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+#userUsageInfo .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#userUsageInfo .label {
+  color: #94a3b8;
+}
+
+#userUsageInfo .value {
+  font-weight: 600;
+}
+
+.value.premium {
+  background: linear-gradient(90deg, #facc15, #f97316);
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #000;
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  border: 1px solid;
+  border-color: #1d7efd;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  transition: width 0.4s ease;
+}
+
+.hola {
+  font-size: 0.75rem;
+  color: white;
+}
+
+.barran {
+  display: flex;
+  padding: 10px;
+  border: 3px solid;
+  border-color: #1d7efd;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.barran span.material-symbols-rounded {
+  display: flex;
+  background: #1d7efd;
+  padding: 6px;
+  color: white;
+  border-radius: 50%;
+}
+
+
+.texte {
+  opacity: 0.4;
+}
+
+.texte:hover {
+  background: none;
+  transform: translhateX(5px);
+}
+
+.menu {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  border-radius: 50%;
+  border-color: #1d7efd;
+  cursor: pointer;
+
+  background: var(--secondary-color);
+
+  transition: all 0.3s ease;
+}
+
+/* Ícone */
+.menu svg {
+  width: 28px;
+  height: 28px;
+  color: var(--text-color);
+}
+
+.menu:hover {
+  border: 2px solid #1d7efd;
+}
+
+/* Hover elegante */
+
+/* Clique */
+.menu:active {
+  transform: scale(0.95);
+}
+
+/* ehenenejn */
+/* Nuvem ligada ao header */
+.cabeca::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px; /* controla até onde desce */
+  width: 100%;
+  height: 60px;
+
+  pointer-events: none;
+  z-index: -1;
+
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color) 0%,
+    var(--primary-color) 30%,
+    var(--primary-color) 60%,
+    var(--primary-color) 55%,
+    transparent 100%
+  );
+}
+
+/* BOTÃO DO CABEÇALHO (FAVORITE) */
+.favorite {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  border-radius: 50%;
+  border-color: #1d7efd;
+  cursor: pointer;
+
+  background: var(--secondary-color);
+
+  transition: all 0.3s ease;
+}
+
+/* Ícone */
+.favorite svg {
+  width: 28px;
+  height: 28px;
+  color: var(--text-color);
+}
+
+/* Hover elegante */
+.favorite:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(143, 111, 255, 0.45);
+}
+
+/* Clique */
+.menu:active {
+  transform: scale(0.95);
+    }
