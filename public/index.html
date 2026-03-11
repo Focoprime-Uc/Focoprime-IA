@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<!-- Coding By focoprime - www.focoprime.online  -->
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focoprime AI</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <!--- pwa progressive web app -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2563eb">
+  <!-- SEO + IA -->
+  <meta name="description" content="FocoPrime IA é um assistente escolar inteligente criado em Moçambique para ajudar alunos com estudos, exames e aprendizagem personalizada.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FocoPrime IA – Assistente Escolar Inteligente">
+  <meta property="og:description" content="Assistente escolar criado em Moçambique para ajudar alunos com estudos, exames e aprendizagem personalizada.">
+  <meta property="og:image" content="https://ai-focoprime.online/images/Preview.png">
+  <meta property="og:url" content="https://ai-focoprime.online">
+  <meta property="og:site_name" content="FocoPrime IA">
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FocoPrime IA – Assistente Escolar Inteligente">
+  <meta name="twitter:description" content="Aprenda melhor com a FocoPrime IA, um assistente educacional inteligente feito para estudantes.">
+  <meta name="twitter:image" content="https://ai-focoprime.online/images/Preview.png">
+  <!-- Anúncios do Mondiad -->
+  <script async src="https://ss.mrmnd.com/ctatic/6e30348f-197b-4bac-986f-eaf7ec7bd707.js"></script>
+  <!-- Linking Google Fonts For Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@32,400,0,0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--- Link do remixicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Prism.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+  
+  <!--- estilos css --->
+  <link rel="stylesheet" href="estilos/header.css">
+  <link rel="stylesheet" href="estilos/modelos.css">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="stylesheet" href="estilos/historias.css">
+  <link rel="stylesheet" href="estilos/upgrade.css">
+  <link rel="stylesheet" href="estilos/login.css">
+  <link rel="stylesheet" href="estilos/sidebar.css">
+  <link rel="stylesheet" href="estilos/promo.css">
+  <link rel="stylesheet" href="estilos/codebloco.css">
+  <link rel="stylesheet" href="estilos/userpainel.css">
+  <link rel="stylesheet" href="estilos/groups.css">
+  <link rel="stylesheet" href="estilos/perfil.css">
+  <link rel="stylesheet" href="estilos/topremiun.css">
+  <link rel="stylesheet" href="estilos/apps.css">
+
+  <!-- Linguagens principais -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+</head>
+
+<body>
+  <!--- TOP UP BAR CABEÇALHO  --->
+  <div id="top-app-bar"></div>
+  
+  <!--- CABEÇALHO FOCOPRIME  --->
+  <div id="header"></div>
+  
+  <!--- USER PAINEL --->
+  <div id="userPanelContainer"></div>
+  
+  <div class="container">
+    
+    <!--- APK RECOMENDAÇÃO  --->
+    <div id="appInstallBar"></div>
+    
+    <div id="loginheader"></div>
+    <div id="modelUsageBadge"></div>
+    
+    <!---======= UPGRADE MODE ====== --->
+    <div id="upgradeModal" class="upgrade-modal">
+      <div class="upgrade-box">
+        <button class="upgrade-close" id="closeUpgrade">&times;</button>
+        <!--- upgrade logótipo e ícone --->
+        <div class="upgrade-header">
+          <span class="upgrade-logo">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor" viewBox="0 0 24 24" >
+              <!-- focoprime chat ia svg --->
+              <path d="M17.31 14H9.72L5.95 2.68A1 1 0 0 0 5 2H2v2h2.28l3.54 10.63A2 2 0 0 0 9.72 16h7.59a2 2 0 0 0 1.87-1.3l2.76-7.35-1.87-.7zM10 18a2 2 0 1 0 0 4 2 2 0 1 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 1 0 0-4"></path><path d="m11.71 7.29-1.42 1.42 2.71 2.7 4.71-4.7-1.42-1.42L13 8.59z"></path>
+            </svg>
+          </span>
+          <!--- parte do título  --->
+          <div class="upgrade-title">
+            <h2>Upgrade para</h2>
+            <span class="pro-badge">PRO</span>
+          </div>
+          <!--- descrição  --->
+          <p>Desbloqueie recursos avançados da FocoPrime IA e tenha acesso total a focoprime</p>
+        </div>
+        <!--- recursos  --->
+        <ul class="upgrade-features">
+          <li>
+            <span class="material-symbols-rounded">image</span>
+            Fotos ilimitadas
+          </li>
+          <li>
+            <span class="material-symbols-rounded">all_inclusive</span>
+            Mensagens ilimitadas
+          </li>
+          <li>
+            <span class="material-symbols-rounded">record_voice_over</span>
+            Explicação por voz
+          </li>
+          <li>
+            <span class="material-symbols-rounded">spellcheck</span>
+            Resolução de textos
+          </li>
+          <li>
+            <span class="material-symbols-rounded">hub</span>
+            Modelos ilimitados
+          </li>
+        </ul>
+        <!--- botão do upgrade --->
+        <button class="upgrade-btn">
+          <span class="material-symbols-rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            fill="currentColor" viewBox="0 0 24 24" >
+              <!--- focoprime iriano 2026 ícone  --->
+              <path d="M20.33 3.06a1 1 0 0 0-1.11.32L16 7.4l-3.22-4.02c-.38-.47-1.18-.47-1.56 0L8 7.4 4.78 3.38c-.27-.33-.71-.46-1.11-.32S3 3.58 3 4v15c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-.42-.27-.8-.67-.94M7.22 9.63c.38.47 1.18.47 1.56 0L12 5.61l3.22 4.02c.38.47 1.18.47 1.56 0L19 6.86v8.15H5V6.85l2.22 2.77ZM5 19.01v-2h14v2z"></path>
+            </svg>
+          </span>
+          Fazer Upgrade Agora
+        </button>
+        <!--- nota focoprime (baixo) --->
+        <span class="upgrade-note">
+          Cancelar quando quiser • Seguro • Rápido
+        </span>
+      </div>
+    </div>
+    <!--- ====== FINAL DO POPUP (UPGRADE) ====--->
+    
+    <!--- ====== MODELO SELETOR MODAL ======== --->
+    <div id="modelModal" class="model-modal">
+      <div class="model-box">
+        <!--- selecionado de modelo título --->
+        <h3 class="model-title">Selecionar modelo</h3>
+        <!--- lista dos modelos --->
+        <div class="model-list">
+          <!--- modelo v3.5 lite --->
+          <div class="model-item" data-model="v3.5">
+            <div class="model-info">
+              <strong>FocoPrime V3.5</strong>
+              <span class="badge free">Grátis</span>
+            </div>
+          </div>
+          <!--- modelo v4.0 crack --->
+          <div class="model-item" data-model="v4.0">
+            <div class="model-info">
+              <strong>FocoPro V4.0</strong>
+              <span class="badge free">Grátis</span>
+            </div>
+          </div>
+          <!--- modelo v5.0 premium --->
+          <div class="model-item premium" data-model="v5.0">
+            <div class="model-info">
+              <strong>FocoPremium V5.0</strong>
+              <span class="badge premium-badge">Premium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--- ========= FECHAMENTO DO SELETOR ========== --->
+    
+    <!--- ====== LOADER DE ENTRADA ====== --->
+    <div id="ai-loader" class="ai-loader">
+      <div class="loader-logo">
+        <img src="images/entrada.png" loading="lazy" alt="FocoPrime" />
+      </div>
+      <div class="loader-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!--- Assinatura --->
+      <div class="loader-signature">
+        Criado por <strong>Iriano Gonçalves</strong>
+      </div>
+      <div class="loader-parag">
+        <strong>Focoprime@2026 Direitos reservados</strong>
+      </div>
+    </div>
+    <!--- ========== FECHAMENTO =========== --->
+    <!--- ====== FECHAMENTO DO SIDEMENU ===== --->
+    
+    <!-- ========== HISTÓRICO SIDEBAR ========== -->
+<div id="historySidebar" class="history-sidebar">
+
+  <!-- 🔎 TOPO -->
+  <div class="history-top">
+
+    <div class="search-wrapper">
+      <i class="ri-search-line"></i>
+      <input type="text" id="historySearch" placeholder="Procurar">
+    </div>
+
+    <!-- 📌 MENU RÁPIDO -->
+    <div class="history-menu">
+
+      <div class="menu-item" id="newChatBtn">
+        <i class="ri-edit-line"></i>
+        <span>Novo chat</span>
+      </div>
+
+      <div class="menu-item premium-item">
+  <div class="menu-left">
+    <i class="ri-image-line"></i>
+    <span>Imagens</span>
+  </div>
+  <span class="premium-badge">PREMIUM</span>
+</div>
+
+      <div class="menu-item mona novo-item">
+  <div class="menu-left">
+    <i class="ri-apps-line"></i>
+    <span>Apps</span>
+  </div>
+  <span class="novo-badge">NOVO</span>
+</div>
+
+      <div class="menu-item">
+        <i class="ri-presentation-line"></i>
+        <span>Escola Bars</span>
+      </div>
+
+      <div class="menu-item">
+        <i class="ri-whatsapp-line"></i>
+        <span>WhatsApp</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- 🗂 LISTA DE CONVERSAS -->
+  <div id="historyList" class="history-list"></div>
+
+  <!-- 👤 UTILIZADOR -->
+<div class="history-user" id="openUserPanelBtn">
+  <img id="sidebarUserPhoto" src="images/carta.png" loading="lazy">
+  <span id="sidebarUserName">Usuário</span>
+  <i class="ri-arrow-right-s-line user-arrow"></i>
+</div>
+
+</div>
+
+<div id="historyOverlay" class="history-overlay"></div>
+    <!--- ============== FECHAMENTO DO HISTÓRICO ========= --->
+    <!-- ===== USER PANEL GEMINI STYLE ===== -->
+<div id="userGeminiPanel" class="user-gemini-panel">
+
+  <div class="sidehead">
+    <span class="sidetitle">Perfil do usuário</span>
+    <button id="closeUserGemini" class="fechar">
+      <span class="material-symbols-rounded">
+        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+fill="currentColor" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="M3 5h18v2H3zm5 6h13v2H8zm5 6h8v2h-8z"></path>
+</svg>
+      </span>
+    </button>
+  </div>
+
+  <div class="user-gemini-profile">
+    <img id="panelUserPhoto" src="images/carta.png" loading="lazy">
+    
+    <div class="avatar-loading" id="avatarLoading">
+  <div class="spinner"></div>
+</div>
+    
+    <div id="photoOptions" class="photo-options">
+  <div class="photo-option" id="viewPhotoOption">
+    <i class="ri-eye-line"></i>
+    <span>Ver imagem</span>
+  </div>
+  <div class="photo-option" id="uploadPhotoOption">
+    <i class="ri-upload-2-line"></i>
+    <span>Carregar imagem</span>
+  </div>
+</div>
+
+<div class="avatar-error" id="panelAvatarError">
+  <i class="ri-error-warning-line"></i>
+  <span>Imagem maior que 1MB</span>
+</div>
+
+<input type="file" id="panelPhotoInput" accept="image/*" hidden>
+    
+    <div class="user-name-wrapper">
+  <h3 id="panelUserName">Usuário</h3>
+  <input type="text" id="panelUserNameInput" class="edit-name-input">
+  <button id="editNameBtn" class="edit-name-btn">
+    <i class="ri-pencil-line"></i>
+  </button>
+  <button id="saveNameBtn" class="save-name-btn">Guardar</button>
+</div>
+  </div>
+
+    <div class="bio" id="addNicknameBtn">
+  <i class="ri-user-settings-line"></i>
+  <span id="bioText">Adicionar Alcunha</span>
+</div>
+
+<div class="bio-input-wrapper" id="bioInputWrapper" style="display:none;">
+  <input type="text" id="nicknameInput" placeholder="Escreva sua alcunha" maxlength="20">
+  <button id="saveNicknameBtn">Guardar</button>
+</div>
+    
+    <!-- EMAIL -->
+<div class="chatgpt-email">
+  <i class="ri-mail-line"></i>
+  <span id="panelUserEmail">email@email.com</span>
+</div>
+
+<!-- MENU IGUAL AO CHATGPT -->
+<div class="user-gemini-menu">
+
+  <div class="gemini-item">
+    <i class="ri-user-settings-line gid"></i>
+    <span>Personalização</span>
+  </div>
+
+  <div class="gemini-item">
+    <i class="ri-apps-2-line gid"></i>
+    <span>Apps</span>
+  </div>
+
+  <div class="gemini-item">
+    <i class="ri-briefcase-4-line gid"></i>
+    <span>Área de trabalho</span>
+  </div>
+
+  <div class="gemini-item premium">
+    <i class="ri-vip-crown-2-line gid"></i>
+    <span>Atualizar para Plus</span>
+  </div>
+
+  <div class="gemini-item">
+    <i class="ri-parent-line gid"></i>
+    <span>Controlos parentais</span>
+  </div>
+  
+  <div class="gemini-item report">
+  <i class="ri-error-warning-line gid"></i>
+  <span>Reportar Erro</span>
+</div>
+
+</div>
+
+  <button id="panelLogoutBtn" class="panel-logout">
+    <i class="ri-logout-box-r-line"></i>
+    Sair da conta
+  </button>
+
+</div>
+
+<div id="userGeminiOverlay" class="user-gemini-overlay"></div>
+
+    <!--- ====== APP HEADER ====== --->
+    <div id="appheader"></div>
+    <script>
+      fetch("components/appheader.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("appheader").innerHTML = data;
+      });
+    </script>
+    <!--- ====== FECHAMENTO DO APP HEADER ====== --->
+    
+    <!--- ====== LOGIN MODAL GOOGLE/EMAIL (REQUERIDO) ======= --->
+    <div id="loginSuccessBar" class="login-success-bar">
+      <i class="ri-check-line"></i>
+      <span id="loginSuccessText">Login efetuado com sucesso!</span>
+    </div>
+    <!--- ===== LOGIN MODA POPUP ===== --->
+    <div id="loginModal" class="login-modal">
+      <div class="login-box">
+        <!--- barra de erro profissional --->
+        <div id="loginErrorBar" class="login-error-bar">
+          <i class="ri-error-warning-fill"></i>
+          <span id="loginErrorText">Erro ao iniciar sessão</span>
+        </div>
+        <!--- botão de fechar popUp --->
+        <span class="login-close" id="closeLoginModal">
+          <span class="material-symbols-rounded">close</span>
+        </span>
+        <!--- Cabeçalho --->
+        <img src="images/Logo.png" loading="lazy" class="login-logo" />
+        <h2 id="loginTitle">Bem vindo a FocoPrime</h2>
+        <p id="loginSubtitle">Entrar com a sua conta</p>
+        <!--- ========== LOGIN VIEW ========== --->
+        <div id="loginView">
+          <div class="password-container">
+            <input type="email" id="emailInput" placeholder="Email" class="input-premium">
+            <input type="password" id="passwordInput" placeholder="Senha" class="input-premium">
+            <i class="ri-eye-line password-toggle" id="toggleLoginPassword"></i>
+          </div>
+          <!--- Esqueceu a senha? --->
+          <p class="forgot-password">
+            <span id="forgotPasswordBtn">
+              Esqueceu a senha?
+            </span>
+          </p>
+          <!--- Botão de entrar --->
+          <button id="emailLoginBtn" class="btn-premium">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+            fill="currentColor" viewBox="0 0 24 24" >
+              <!--- Focoprime icones svg de email --->
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 2v.51l-8 6.22-8-6.22V6zM4 18V9.04l7.39 5.74c.18.14.4.21.61.21s.43-.07.61-.21L20 9.03v8.96H4Z"></path>
+            </svg>
+            Entrar com Email
+          </button>
+          <!--- Botão continuar com a Google --->
+          <button id="googleLoginBtn" class="btn-google">
+            <svg class="google-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.69 1.22 9.18 3.6l6.85-6.85C35.92 2.36 30.39 0 24 0 14.61 0 6.43 5.4 2.39 13.29l7.98 6.2C12.19 13.24 17.66 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.1 24.5c0-1.64-.15-3.21-.43-4.73H24v9.02h12.4c-.53 2.87-2.14 5.31-4.56 6.95l7.08 5.5C43.96 37.01 46.1 31.33 46.1 24.5z"/>
+              <path fill="#FBBC05" d="M10.37 28.49c-.48-1.44-.75-2.98-.75-4.49s.27-3.05.75-4.49l-7.98-6.2C.86 16.53 0 20.13 0 24s.86 7.47 2.39 10.69l7.98-6.2z"/>
+              <path fill="#34A853" d="M24 48c6.39 0 11.75-2.11 15.67-5.74l-7.08-5.5c-1.97 1.32-4.49 2.09-8.59 2.09-6.34 0-11.81-3.74-13.63-9.99l-7.98 6.2C6.43 42.6 14.61 48 24 48z"/>
+            </svg>
+            Continuar com Google
+          </button>
+          <!--- Ainda não tens conta? --->
+          <p class="switch-text">
+            Ainda não tens conta?
+            <span id="showRegister">Criar conta</span>
+          </p>
+        </div>
+        <!---=============== REGISTER VIEW ============--->
+        <div id="registerView" style="display: none;">
+          <!--- Avatar Upload --->
+          <div class="avatar-upload">
+            <input type="file" id="photoInput" accept="image/*" hidden>
+            <img src="images/user-placeholder.png" loading="lazy" id="previewPhoto">
+            <button type="button" id="changePhotoBtn">
+              <i class="ri-camera-line"></i>
+            </button>
+          </div>
+          
+          <!-- Aviso tamanho -->
+<p class="avatar-info">
+  A imagem deve ter no máximo 1MB
+</p>
+
+<!-- Erro tamanho -->
+<div id="avatarError" class="avatar-error">
+  <i class="ri-error-warning-fill"></i>
+  <span>Impossível colocar essa imagem. É maior que 1MB.</span>
+</div>
+          
+          <!--- barras dos emets --->
+          <input type="text" id="registerName" placeholder="Nome completo" class="input-premium">
+          <input type="email" id="registerEmail" placeholder="Email" class="input-premium">
+          <div class="password-container">
+            <input type="password" id="registerPassword" placeholder="Senha" class="input-premium">
+            <i class="ri-eye-line password-toggle" id="toggleRegisterPassword"></i>
+          </div>
+          <!--- botão criar conta --->
+          <button id="emailRegisterBtn" class="btn-premium">
+            Criar conta
+          </button>
+          <!--- já tens conta? --->
+          <p class="switch-text">
+            Já tens conta?
+            <span id="showLogin">Entrar</span>
+          </p>
+        </div>
+        <!--- ===== Login terms ===== --->
+        <span class="login-terms">
+          Ao continuar, você aceita as nossas
+          <a href="#"><strong>Políticas de privacidade</strong></a>
+        </span>
+      </div>
+    </div>
+    <!--- ====== FECHAMENTO DO LOGIN (ID) ====== --->
+    
+    <!--- ====== SUGESTÕES ====== --->
+    <div id="sugere"></div>
+    <!--- ====== FECHAMENTO ===== --->
+    
+    
+    <!-- Chats -->
+    <div class="chats-container"></div>
+    
+    <!-- Prompt Input -->
+    <div class="prompt-container">
+      <div class="prompt-wrapper">
+        <form action="#" class="prompt-form">
+          <input type="text" placeholder="Perguntar á focoprime" class="prompt-input" required />
+          <div class="prompt-actions">
+            <!-- File Upload Wrapper -->
+            <div class="file-upload-wrapper">
+              <img src="#" class="file-preview" loading="lazy" />
+              <input id="file-input" type="file" accept="image/*, .pdf, .txt, .csv" hidden />
+              <button type="button" class="file-icon material-symbols-rounded">description</button>
+              <button id="cancel-file-btn" type="button" class="material-symbols-rounded">close</button>
+              <button id="add-file-btn" type="button" class="material-symbols-rounded">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="currentColor" viewBox="0 0 24 24" >
+                  <!--- focoprime 2026 --->
+                  <path d="m5 17.41 3-3 1.29 1.29c.39.39 1.02.39 1.41 0l5.29-5.29 3 3V14h2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H5zM19 5v5.59L16.71 8.3a.996.996 0 0 0-1.41 0l-5.29 5.29-1.29-1.29a.996.996 0 0 0-1.41 0l-2.29 2.29V5h14Z"></path><path d="M8.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 1 0 0-3m13.22 11.07-1.94-.86-.86-1.94a.46.46 0 0 0-.42-.28c-.19-.02-.35.1-.43.27l-.86 1.87-1.95.94c-.16.08-.27.25-.26.43 0 .18.11.35.28.42l1.94.86.86 1.94a.471.471 0 0 0 .86 0l.86-1.94 1.94-.86a.471.471 0 0 0 0-.86Z"></path>
+                </svg>
+              </button>
+            </div>
+            
+            <!-- Send Prompt and Stop Response Buttons -->
+            <button id="stop-response-btn" type="button" class="material-symbols-rounded">stop_circle</button>
+            <button id="send-prompt-btn" class="material-symbols-rounded">arrow_upward</button>
+          </div>
+        </form>
+        
+        <!-- Theme and Delete Chats Buttons -->
+        <button id="theme-toggle-btn" class="material-symbols-rounded">light_mode</button>
+        <button id="delete-chats-btn" class="material-symbols-rounded menu-icon">
+          <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+fill="currentColor" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="M9.88 18.36a3 3 0 0 1-4.24 0 3 3 0 0 1 0-4.24l2.83-2.83-1.41-1.41-2.83 2.83a5.003 5.003 0 0 0 0 7.07c.98.97 2.25 1.46 3.54 1.46s2.56-.49 3.54-1.46l2.83-2.83-1.41-1.41-2.83 2.83Zm2.83-14.14L9.88 7.05l1.41 1.41 2.83-2.83a3 3 0 0 1 4.24 0 3 3 0 0 1 0 4.24l-2.83 2.83 1.41 1.41 2.83-2.83a5.003 5.003 0 0 0 0-7.07 5.003 5.003 0 0 0-7.07 0Z"></path><path d="m16.95 8.46-.71-.7-.7-.71-4.25 4.24-4.24 4.25.71.7.7.71 4.25-4.24z"></path>
+</svg>
+        </button>
+      </div>
+    </div>
+    
+    <!--- ======= TOAST DE NOTIFICAÇÃO DO LOGIN ======== --->
+    <!--- ============================================== --->
+    <div id="toast" class="toast">
+      <div class="toast-content">
+        <i class="fa-brands fa-google toast-icon"></i>
+        <span id="toastMessage"></span>
+      </div>
+    </div>
+  </div>
+  <!--- ========== FECHAMENTO ============= --->
+  
+  <!-- GROUP CHAT MODAL -->
+<div id="groupChatModal" class="group-chat-modal">
+  <div class="group-chat-box">
+    
+    <div class="group-header">
+      <h3>Chat da Comunidade</h3>
+      <button id="closeGroupChat">✕</button>
+    </div>
+
+    <div id="groupMessages" class="group-messages"></div>
+
+    <div class="group-input">
+      
+      <!-- Barra de resposta -->
+      <div class="group-input-container">
+  <!-- Preview da resposta -->
+  <div id="replyPreview" class="group-reply-preview" style="display: none;">
+    <span id="replyText"></span>
+    <button id="cancelReply">✕</button>
+  </div>
+
+  <!-- Input + botão enviar -->
+  <div class="group-input-inner">
+    <input type="text" id="groupMessageInput" class="prompt-input" placeholder="Escrever mensagem...">
+    <button id="sendGroupMessage" class="material-symbols-rounded">arrow_upward</button>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+
+<!-- ===== UPGRADE PAGE ===== -->
+<div id="upgradePage" class="upgrade-page">
+  
+  <div class="particles"></div>
+
+  <div class="upgrade-header">
+    <button id="closeUpgradePage" class="upgrade-close">
+      <i class="ri-close-line"></i>
+    </button>
+  </div>
+
+  <div class="upgrade-content">
+
+    <h1 class="upgrade-title">
+      Acesso <span>PRO</span>
+    </h1>
+
+    <div class="upgrade-hero">
+  <div class="logo-wrapper">
+    <img src="images/carta.png" loading="lazy" class="upgrade-logo">
+    <div class="premium-ribbon">PREMIUM</div>
+  </div>
+</div>
+
+    <div class="upgrade-card">
+      <h2>FocoPrime AI Pro</h2>
+      <p>
+        Mensagens ilimitadas, respostas GPT-5, criação infinita de imagens,
+        resumo PDF/URL/YouTube.
+      </p>
+      <small>Grátis por 3 dias, depois 7,99 US$/sem.</small>
+    </div>
+
+    <div class="trial-box">
+      <span>Teste grátis ativo</span>
+      <div class="toggle active"></div>
+    </div>
+
+    <div class="price-info">
+      <div>
+        <span class="badge">3 dias grátis</span>
+        <strong>US$ 0.00</strong>
+      </div>
+      <div>
+        <small>Depois 7,99 US$/semana</small>
+      </div>
+    </div>
+
+    <button class="upgrade-btn">
+      Testar grátis <i class="ri-arrow-right-line"></i>
+    </button>
+
+  </div>
+</div>
+
+<!-- ========= APPS PAGE ========= -->
+<div id="appsPage" class="apps-page">
+
+  <div class="apps-header">
+    <button id="closeAppsPage" class="close-apps">
+      <i class="ri-arrow-left-line"></i>
+    </button>
+    <h1 class="apps-title">Descubra o Ecossistema <span>FocoPrime</span></h1>
+  </div>
+
+  <p class="apps-description">
+    Explore produtos e funcionalidades oficiais da <strong>FocoPrime</strong>, criados para elevar sua produtividade e aprendizado.
+  </p>
+
+  <div class="apps-grid">
+
+    <div class="app-card" id="openGroupChatApp">
+      <i class="ri-chat-3-line"></i>
+      <span>Chat em Grupo</span>
+    </div>
+
+    <div class="app-card">
+      <i class="ri-key-2-line"></i>
+      <span>API Key</span>
+    </div>
+
+    <div class="app-card">
+      <i class="ri-code-box-line"></i>
+      <span>Developer</span>
+    </div>
+
+    <div class="app-card">
+      <i class="ri-flask-line"></i>
+      <span>Testes</span>
+    </div>
+
+  </div>
+
+</div>
+  
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+      .then(() => console.log("PWA ativa"))
+      .catch(err => console.log("Erro PWA:", err));
+    }
+  </script>
+  <!--- ======== FECHAMENTO ============= --->
+
+  
+  <!--- prism js --->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-html.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+  
+  <!--- GLOBALS SCRIPTS --->
+  <script type="module" src="scripts/init.js"></script>
+  <script src="globals/theme.js"></script>
+  <script src="globals/perfil.js"></script>
+  <script src="globals/apps.js"></script>
+  <script src="globals/upgradeplan.js"></script>
+  <script src="script.js"></script>
+  
+  <!--- SCRIPTS INIT.JS LOAD --->
+  <script src="scripts/load.js"></script>
+  <script src="scripts/apk.js"></script>
+  <script src="scripts/historias.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+
+    </html>
